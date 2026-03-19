@@ -29,6 +29,15 @@ header {
   padding: 4rem 0 2rem;
 }
 
+.logo-image{
+  width: 84px;
+  height: 84px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 10px rgba(78, 5, 18, 0.2);
+}
+
 .logo-mark {
   width: 64px;
   height: 64px;
