@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a2e;
+  background: #faf8f8;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Index Page Header ─── */
+header {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.logo-mark {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #4e0512, #b21838);
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 16px rgba(78, 5, 18, 0.2);
+}
+
+.logo-mark svg {
+  width: 32px;
+  height: 32px;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #4e0512;
+  letter-spacing: -0.02em;
+}
+
+header .tagline {
+  color: #7f6b6f;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+main {
+  flex: 1;
+}
+
+/* ─── Index Page Cards ─── */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(78, 5, 18, 0.06);
+  box-shadow: 0 1px 4px rgba(78, 5, 18, 0.04);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4e0512, #b21838);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(78, 5, 18, 0.1);
+  transform: translateY(-3px);
+  border-color: rgba(78, 5, 18, 0.12);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.card-icon.terms {
+  background: rgba(78, 5, 18, 0.08);
+  color: #4e0512;
+}
+
+.card-icon.privacy {
+  background: rgba(178, 24, 56, 0.08);
+  color: #b21838;
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #1a1a2e;
+}
+
+.card p {
+  color: #7f6b6f;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.card .arrow {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #b21838;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ─── Legal Pages ─── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4e0512;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #b21838;
+}
+
+.legal-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(78, 5, 18, 0.08);
+}
+
+.legal-header h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #4e0512;
+  letter-spacing: -0.02em;
+}
+
+.last-updated {
+  color: #9a8588;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  font-weight: 400;
+}
+
+.section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(78, 5, 18, 0.05);
+  box-shadow: 0 1px 3px rgba(78, 5, 18, 0.03);
+  transition: border-color 0.2s;
+}
+
+.section:hover {
+  border-color: rgba(78, 5, 18, 0.12);
+}
+
+.section h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4e0512;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.section p {
+  color: #4a3f41;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.section a {
+  color: #b21838;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Footer ─── */
+footer {
+  text-align: center;
+  padding: 3rem 0 1.5rem;
+  color: #9a8588;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #b21838;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p + p {
+  margin-top: 0.2rem;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 3rem 0 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .legal-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 1.25rem 1.25rem;
+  }
+}
